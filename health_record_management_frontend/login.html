@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Health Record Management</title>
+    <link rel="stylesheet" href="css\login.css">
+</head>
+
+<body>
+    <script src="js/login.js"></script>
+    <div class="main">
+        <h1>Hoş Geldiniz</h1>
+        <h3>Giriş Yapın</h3>
+
+        <form id="loginForm">
+            <label for="email">
+                E-Mail:
+            </label>
+            <input type="text" id="email" name="email" 
+                placeholder="abc@email.com" required>
+
+            <label for="password">
+                Şifre:
+            </label>
+            <input type="password" id="password" name="password" 
+                placeholder="Şifre" required>
+
+            <div class="wrap">
+                <button type="submit">
+                    Giriş
+                </button>
+            </div>
+        </form>
+        
+        <p>Hesabınız yok mu?
+            <a href="signup.html" style="text-decoration: none;">
+                Kaydolun
+            </a>
+        </p>
+
+        <div id="errorMessage" style="color: red; margin-top: 10px;"></div>
+    </div>
+</body>
+
+</html>

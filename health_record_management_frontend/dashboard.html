@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helath Record Management</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <script src="js/dashboard.js"></script>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- User Profile Section -->
+            <div class="user-section">
+                <div class="user-info">
+                    <span class="username" id="username">username</span>
+                </div>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="sidebar-menu">
+                <div class="menu-section">
+                    <h3>Kategoriler</h3>
+                    <ul>
+                        <li><a href="/kategori_liste.html">Kategori</a></li>
+                        <li><a href="/kategori_ekle.html">Yeni Kategori</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Sonuçlar</h3>
+                    <ul>
+                        <li><a href="/sonuclar_liste.html">Sonuçlar</a></li>
+                        <li><a href="/sonuclar_ekle.html">Yeni Sonuç Gir</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="user-section">
+                <button class="logout-btn" id="logoutBtn">Çıkış Yap</button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <header class="content-header">
+                <h1>Ana Sayfa</h1>
+            </header>
+            <div class="content-body">
+                <div class="welcome-section">
+                    <h2>Hoş Geldiniz</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

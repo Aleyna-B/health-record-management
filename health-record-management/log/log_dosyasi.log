@@ -1,0 +1,4 @@
+2025-03-18T23:29:35.465+03:00  INFO 11480 --- [health-record-management] [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-18T23:29:35.689+03:00  INFO 11480 --- [health-record-management] [RMI TCP Connection(18)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-18T23:29:35.693+03:00  INFO 11480 --- [health-record-management] [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-18T23:29:35.724+03:00  INFO 11480 --- [health-record-management] [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

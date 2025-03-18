@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonuçlar - Health Record Management</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/results.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- User Profile Section -->
+            <div class="user-section">
+                <div class="user-info">
+                    <span class="username" id="username">username</span>
+                </div>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="sidebar-menu">
+                <div class="menu-section">
+                    <h3>Kategoriler</h3>
+                    <ul>
+                        <li><a href="/kategori_liste.html">Kategori</a></li>
+                        <li><a href="/kategori_ekle.html">Yeni Kategori</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Sonuçlar</h3>
+                    <ul>
+                        <li><a href="/sonuclar_liste.html" class="active">Sonuçlar</a></li>
+                        <li><a href="/sonuclar_ekle.html">Yeni Sonuç Gir</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+
+            <div class="user-section">
+                <button class="logout-btn" id="logoutBtn">Çıkış Yap</button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <header class="content-header">
+                <h1>Sonuçlar</h1>
+            </header>
+            
+            <div class="content-body">
+                <div class="results-container">
+                    <div class="results-header">
+                        <div class="result-patient">Hasta</div>
+                        <div class="result-category">Kategori</div>
+                        <div class="result-clinic">Klinik</div>
+                        <div class="result-date">Tarih</div>
+                        <div class="result-report">Rapor</div>
+                        <div class="result-image-indicator">Görüntü</div>
+                        <div class="result-actions">İşlemler</div>
+                    </div>
+                    <div id="resultsList" class="results-list">
+                        <!-- Results will be loaded here -->
+                        <div class="loading-indicator">Yükleniyor...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/resultlist.js"></script>
+</body>
+</html>

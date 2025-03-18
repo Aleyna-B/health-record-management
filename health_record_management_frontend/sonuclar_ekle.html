@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Sonuç Ekle - Health Record Management</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/result-form.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- User Profile Section -->
+            <div class="user-section">
+                <div class="user-info">
+                    <span class="username" id="username">username</span>
+                </div>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="sidebar-menu">
+                <div class="menu-section">
+                    <h3>Kategoriler</h3>
+                    <ul>
+                        <li><a href="/kategori_liste.html">Kategori</a></li>
+                        <li><a href="/kategori_ekle.html">Yeni Kategori</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Sonuçlar</h3>
+                    <ul>
+                        <li><a href="/sonuclar_liste.html">Sonuçlar</a></li>
+                        <li><a href="/sonuclar_ekle.html" class="active">Yeni Sonuç Gir</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="user-section">
+                <button class="logout-btn" id="logoutBtn">Çıkış Yap</button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <header class="content-header">
+                <h1>Yeni Sonuç Ekle</h1>
+            </header>
+            
+            <div class="content-body">
+                <div class="form-container">
+                    <form id="resultForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="patientId">Kişi</label>
+                            <input type="number" id="patientId" name="patientId" required min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">Kategori</label>
+                            <select id="category" name="category" required>
+                                <option value="">Yükleniyor...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="klinik">Klinik</label>
+                            <select id="klinik" name="klinik" required>
+                                <option value="">Klinik seçiniz</option>
+                                <option value="ORTOPEDI">Ortopedi</option>
+                                <option value="NOROLOJI">Nöroloji</option>
+                                <option value="FIZYOTERAPI">Fizyoterapi</option>
+                                <option value="DAHILIYE">Dahiliye</option>
+                                <option value="KADIN_DOGUM">Kadın Doğum</option>
+                                <option value="KARDIYOLOJI">Kardiyoloji</option>
+                                <option value="KBB">KBB</option>
+                                <option value="ONKOLOJI">Onkoloji</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="report">Rapor</label>
+                            <textarea id="report" name="report" rows="5" required minlength="10" maxlength="300" placeholder="Rapor detaylarını giriniz (10-300 karakter)"></textarea>
+                            <div class="char-counter">0/300</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="imageInput">Görüntü</label>
+                            <div class="image-upload-container">
+                                <input type="file" id="imageInput" name="img" accept="image/*">
+                                <label for="imageInput" class="custom-file-upload">
+                                    <span>Dosya Seç</span>
+                                </label>
+                                <div id="imagePreview" class="image-preview"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">Kaydet</button>
+                            <a href="sonuclar_liste.html" class="cancel-btn">İptal</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/result_add.js"></script>
+    <script>
+        // Character counter for report textarea
+        const reportTextarea = document.getElementById('report');
+        const charCounter = document.querySelector('.char-counter');
+        
+        reportTextarea.addEventListener('input', function() {
+            const length = this.value.length;
+            charCounter.textContent = `${length}/300`;
+            
+            if (length > 300) {
+                charCounter.classList.add('error');
+            } else {
+                charCounter.classList.remove('error');
+            }
+        });
+    </script>
+</body>
+</html>

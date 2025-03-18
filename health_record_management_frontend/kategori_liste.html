@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Record Management - Kategoriler</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/category-list.css">
+</head>
+<body>
+    <script src="js/dashboard.js"></script>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <!-- User Profile Section -->
+            <div class="user-section">
+                <div class="user-info">
+                    <span class="username" id="username">Username</span>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="sidebar-menu">
+                <div class="menu-section">
+                    <h3>Kategoriler</h3>
+                    <ul>
+                        <li><a href="kategori_liste.html" class="active">Kategori</a></li>
+                        <li><a href="kategori_ekle.html">Yeni Kategori</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Sonuçlar</h3>
+                    <ul>
+                        <li><a href="sonuclar_liste.html">Sonuçlar</a></li>
+                        <li><a href="sonuclar_ekle.html">Yeni Sonuç Ekle</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="user-section">
+                <button class="logout-btn" id="logoutBtn">Çıkış Yap</button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <header class="content-header">
+                <h1>Kategoriler</h1>
+            </header>
+
+            <div class="content-body">
+                <div class="category-section">
+                    <h2>Kategoriler</h2>
+                    
+                    <!-- Category List -->
+                    <div class="category-list-container">
+                        <div class="category-list-header">
+                            <div class="category-name">Adı</div>
+                            <div class="category-en-name">İngilizce Adı</div>
+                            <div class="category-parent">Üst Kategori</div>
+                            <div class="category-actions">İşlemler</div>
+                        </div>
+                        
+                        <div id="categoryList" class="category-list-body">
+                            <!-- Categories will be loaded here -->
+                            <div class="loading-indicator">Yükleniyor...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/categorylist.js"></script>
+</body>
+</html>
